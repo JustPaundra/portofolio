@@ -1,27 +1,71 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: var(--font-sans);
+  }
+  :root {
+    --background: #0f1117;
+    --foreground: #ffffff;
+    --card: #1a1d27;
+    --card-foreground: #ffffff;
+    --popover: #1a1d27;
+    --popover-foreground: #ffffff;
+    --primary: #2563eb;
+    --primary-foreground: #ffffff;
+    --secondary: #252836;
+    --secondary-foreground: #ffffff;
+    --muted: #252836;
+    --muted-foreground: #9ca3af;
+    --accent: #2563eb;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #2d3148;
+    --input: #252836;
+    --ring: #2563eb;
+    --radius: 0.75rem;
+  }
+  .dark {
+    --background: #0f1117;
+    --foreground: #ffffff;
+    --card: #1a1d27;
+    --card-foreground: #ffffff;
+    --popover: #1a1d27;
+    --popover-foreground: #ffffff;
+    --primary: #2563eb;
+    --primary-foreground: #ffffff;
+    --secondary: #252836;
+    --secondary-foreground: #ffffff;
+    --muted: #252836;
+    --muted-foreground: #9ca3af;
+    --accent: #2563eb;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #2d3148;
+    --input: #252836;
+    --ring: #2563eb;
+    --radius: 0.75rem;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
   }
 }
