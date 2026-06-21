@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { profile } from "@/lib/data";
 import { motion } from "framer-motion";
 
@@ -23,13 +23,11 @@ export default function AboutSection() {
   const email = profile.email || "madepaundra@gmail.com";
   const phone = profile.phone || "+62 812-4674-0380";
   const location = profile.location || "Bali, Indonesia";
-  const website = profile.website || "www.example.com";
 
   const infoItems = [
     { icon: <Mail className="w-5 h-5 text-blue-500" />, label: "Email", value: email, href: `mailto:${email}` },
     { icon: <Phone className="w-5 h-5 text-blue-500" />, label: "Telepon", value: phone, href: `tel:${phone.replace(/\s+/g, "")}` },
     { icon: <MapPin className="w-5 h-5 text-blue-500" />, label: "Lokasi", value: location, href: `https://maps.google.com/?q=${encodeURIComponent(location)}` },
-    { icon: <Globe className="w-5 h-5 text-blue-500" />, label: "Website", value: website, href: website.startsWith("http") ? website : `https://${website}` },
   ];
 
   return (

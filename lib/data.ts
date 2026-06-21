@@ -11,8 +11,8 @@ const profile = {
 }
 
 const social = {
-  github: "",
-  linkedin: "",
+  github: "https://github.com/JustPaundra",
+  linkedin: "https://www.linkedin.com/in/made-paundra-63196b198/",
   instagram: "",
   twitter: "",
   youtube: "",

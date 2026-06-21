@@ -4,9 +4,8 @@ import React from "react";
 import { ArrowRight, Download } from "lucide-react";
 import { profile, social } from "@/lib/data";
 import { motion } from "framer-motion";
-import { GithubIcon, LinkedinIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from "./BrandIcons";
+import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 
-// Helper to generate initials from name
 const getInitials = (name: string) => {
   if (!name) return "P";
   const parts = name.trim().split(/\s+/);
@@ -23,13 +22,9 @@ export default function HeroSection() {
 
   const initials = getInitials(name);
 
-  // Social Links Fallbacks
   const socialLinks = [
     { icon: <GithubIcon className="w-5 h-5" />, href: social.github || "https://github.com", show: !!social.github || true },
     { icon: <LinkedinIcon className="w-5 h-5" />, href: social.linkedin || "https://linkedin.com", show: !!social.linkedin || true },
-    { icon: <InstagramIcon className="w-5 h-5" />, href: social.instagram || "https://instagram.com", show: !!social.instagram || true },
-    { icon: <TwitterIcon className="w-5 h-5" />, href: social.twitter || "https://twitter.com", show: !!social.twitter || true },
-    { icon: <YoutubeIcon className="w-5 h-5" />, href: social.youtube || "https://youtube.com", show: !!social.youtube || true },
   ];
 
   const handleScrollToProjects = (e: React.MouseEvent<HTMLButtonElement>) => {

@@ -16,7 +16,7 @@ const DEFAULT_EXPERIENCES = [
   {
     company: "Bangkit Academy by Google, GoTo, Traveloka",
     role: "Mobile Development Cohort",
-    period: "2024",
+    period: "Aug 2024 - Jan 2025",
     description: "Mengikuti program inkubasi talenta digital intensif yang berfokus pada Mobile Development. Mengembangkan keahlian mendalam pada arsitektur perangkat lunak, manajemen state, penulisan clean code, serta sukses menyelesaikan Capstone Project standar industri dengan kolaborasi tim berbasis Agile/Scrum.",
     tech: ["Flutter", "Dart", "Android Studio", "Git & GitHub", "Agile Methodology"],
   }
