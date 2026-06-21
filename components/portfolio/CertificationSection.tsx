@@ -7,22 +7,16 @@ import { motion } from "framer-motion";
 
 const DEFAULT_CERTIFICATIONS = [
   {
-    title: "AWS Certified Solutions Architect - Associate",
-    issuer: "Amazon Web Services (AWS)",
-    year: "2024",
-    link: "https://aws.amazon.com",
+    title: "Mobile Developer Intern",
+    issuer: "PT Thunder Labs Indonesia",
+    year: "2025",
+    link: "/Serti Magang.jpeg",
   },
   {
-    title: "Meta Front-End Developer Professional Certificate",
-    issuer: "Meta (via Coursera)",
-    year: "2023",
-    link: "https://coursera.org",
-  },
-  {
-    title: "Google UX Design Professional Certificate",
-    issuer: "Google (via Coursera)",
-    year: "2023",
-    link: "https://coursera.org",
+    title: "Bangkit Academy Mobile Development Graduate",
+    issuer: "Bangkit Academy by Google, GoTo, Traveloka",
+    year: "2025",
+    link: "/Serti Bangkit.pdf",
   }
 ];
 

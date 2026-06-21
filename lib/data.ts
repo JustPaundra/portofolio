@@ -59,10 +59,16 @@ const projects = [
 
 const certifications = [
   {
-    title: "",
-    issuer: "",
-    year: "",
-    link: "",
+    title: "Mobile Developer Intern",
+    issuer: "PT Thunder Labs Indonesia",
+    year: "2025",
+    link: "/Serti Magang.jpeg",
+  },
+  {
+    title: "Bangkit Academy Mobile Development Graduate",
+    issuer: "Bangkit Academy by Google, GoTo, Traveloka",
+    year: "2025",
+    link: "/Serti Bangkit.pdf",
   }
 ]
 

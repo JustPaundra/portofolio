@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 const DEFAULT_SKILLS = {
   frontend: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.js", "Next.js", "Tailwind CSS", "Redux"],
-  backend: ["Node.js", "Express.js", "NestJS", "PostgreSQL", "MongoDB", "RESTful API", "GraphQL"],
-  tools: ["Git", "GitHub", "Docker", "VS Code", "Postman", "Vercel", "Linux"],
+  backend: ["Node.js", "NestJS", "MySQL", "MongoDB", "RESTful API"],
+  tools: ["Git", "GitHub",  "VS Code", "Postman", "Vercel", "Linux"],
   design: ["UI/UX Design", "Figma", "Responsive Web Design", "Wireframing", "Prototyping"],
 };
 

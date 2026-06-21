@@ -1,6 +1,5 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
 import { projects } from "@/lib/data";
 import { motion } from "framer-motion";
 import { GithubIcon } from "./BrandIcons";
@@ -11,7 +10,6 @@ const DEFAULT_PROJECTS = [
     description: "Aplikasi manajemen transaksi harian (POS) berbasis mobile yang dibangun secara end-to-end dari nol. Menangani perancangan arsitektur, implementasi antarmuka UI/UX yang responsif, hingga integrasi penuh dengan RESTful API backend.",
     tech: ["Flutter", "Dart", "RESTful API", "Android SDK", "UI/UX Design"],
     github: "https://github.com/JustPaundra/pos_magang",
-    demo: "https://github.com/JustPaundra/pos_magang",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
@@ -20,7 +18,6 @@ const DEFAULT_PROJECTS = [
     description: "Aplikasi web analisis sentimen untuk mengklasifikasikan data opini publik dari media sosial. Mengintegrasikan algoritma klasifikasi pada backend Flask untuk memproses teks, menghitung akurasi, dan menyajikan visualisasi data yang interaktif.",
     tech: ["Flask", "Python", "Machine Learning", "NLP", "HTML/CSS"],
     github: "https://github.com/JustPaundra/sentimen-flask-app",
-    demo: "https://github.com/JustPaundra/sentimen-flask-app",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
@@ -29,7 +26,6 @@ const DEFAULT_PROJECTS = [
     description: "Proyek kolaboratif berskala industri yang dikembangkan dalam program inkubasi Bangkit Academy. Berperan aktif sebagai Mobile Developer dalam menyusun arsitektur sistem client, manajemen state, serta kolaborasi tim berbasis metode Agile.",
     tech: ["Flutter", "Android Studio", "Git & GitHub", "Agile/Scrum"],
     github: "https://github.com/HaiStudent-CapstoneProject",
-    demo: "https://github.com/HaiStudent-CapstoneProject",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
     featured: true,
   }
@@ -124,16 +120,6 @@ export default function ProjectsSection() {
                     >
                       <GithubIcon className="w-3.5 h-3.5 text-[#9ca3af]" />
                       <span>Code</span>
-                    </a>
-                    
-                    <a
-                      href={proj.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md shadow-blue-600/10 hover:shadow-blue-600/25 transition-colors"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5" />
-                      <span>Live Demo</span>
                     </a>
                   </div>
                 </div>
