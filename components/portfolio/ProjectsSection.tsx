@@ -4,34 +4,34 @@ import { ExternalLink } from "lucide-react";
 import { projects } from "@/lib/data";
 import { motion } from "framer-motion";
 import { GithubIcon } from "./BrandIcons";
-
+ 
 const DEFAULT_PROJECTS = [
   {
-    title: "E-Commerce Next.js",
-    description: "Aplikasi toko online lengkap dengan manajemen keranjang belanja, proses pembayaran Stripe, dan dashboard admin untuk pengelolaan produk.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Prisma"],
-    github: "https://github.com",
-    demo: "https://example.com",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80",
+    title: "Point of Sale (POS) Mobile App",
+    description: "Aplikasi manajemen transaksi harian (POS) berbasis mobile yang dibangun secara end-to-end dari nol. Menangani perancangan arsitektur, implementasi antarmuka UI/UX yang responsif, hingga integrasi penuh dengan RESTful API backend.",
+    tech: ["Flutter", "Dart", "RESTful API", "Android SDK", "UI/UX Design"],
+    github: "https://github.com/JustPaundra/pos_magang",
+    demo: "https://github.com/JustPaundra/pos_magang",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
   {
-    title: "Task Management Board",
-    description: "Papan kolaborasi tugas tim real-time terinspirasi dari Trello, mendukung drag and drop, otentikasi multi-user, dan notifikasi instan.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-    github: "https://github.com",
-    demo: "https://example.com",
-    image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&q=80",
+    title: "Web Sentiment Analysis App",
+    description: "Aplikasi web analisis sentimen untuk mengklasifikasikan data opini publik dari media sosial. Mengintegrasikan algoritma klasifikasi pada backend Flask untuk memproses teks, menghitung akurasi, dan menyajikan visualisasi data yang interaktif.",
+    tech: ["Flask", "Python", "Machine Learning", "NLP", "HTML/CSS"],
+    github: "https://github.com/JustPaundra/sentimen-flask-app",
+    demo: "https://github.com/JustPaundra/sentimen-flask-app",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     featured: true,
   },
   {
-    title: "AI Image Generator",
-    description: "Platform kreasi gambar bertenaga AI dengan integrasi API DALL-E OpenAI. Memungkinkan pengguna mendesain gambar lewat prompt teks sederhana.",
-    tech: ["React", "OpenAI API", "Node.js", "Cloudinary", "Tailwind CSS"],
-    github: "https://github.com",
-    demo: "https://example.com",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    featured: false,
+    title: "HaiStudent - Capstone Project",
+    description: "Proyek kolaboratif berskala industri yang dikembangkan dalam program inkubasi Bangkit Academy. Berperan aktif sebagai Mobile Developer dalam menyusun arsitektur sistem client, manajemen state, serta kolaborasi tim berbasis metode Agile.",
+    tech: ["Flutter", "Android Studio", "Git & GitHub", "Agile/Scrum"],
+    github: "https://github.com/HaiStudent-CapstoneProject",
+    demo: "https://github.com/HaiStudent-CapstoneProject",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    featured: true,
   }
 ];
 
