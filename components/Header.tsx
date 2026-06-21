@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { User, LogOut, Settings, CreditCard, ChevronDown } from "lucide-react";
+import { User, LogOut, Settings, CreditCard, ChevronDown, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Avatar,
@@ -9,18 +9,31 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar";
 
-export default function Header() {
+interface HeaderProps {
+  onMenuToggle?: () => void;
+}
+
+export default function Header({ onMenuToggle }: HeaderProps) {
   const [activeTab, setActiveTab] = useState<"personal" | "username">("personal");
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <header className="h-16 border-b border-[#2d3148] bg-[#1a1d27] px-6 flex items-center justify-between sticky top-0 z-20">
       {/* Left branding logo */}
-      <div className="flex items-center gap-4">
-        <span className="text-lg font-bold text-white tracking-wide block md:hidden">
+      <div className="flex items-center gap-3">
+        {/* Toggle Button for mobile */}
+        <button
+          onClick={onMenuToggle}
+          className="lg:hidden p-2 -ml-2 rounded-lg text-gray-400 hover:text-white hover:bg-[#252836] transition-colors focus:outline-none"
+          aria-label="Open menu"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
+
+        <span className="text-lg font-bold text-white tracking-wide block lg:hidden">
           Takø<span className="text-blue-500">.</span>
         </span>
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           <span className="text-sm font-semibold text-gray-400">Dasbor</span>
           <span className="text-gray-600">/</span>
           <span className="text-sm font-medium text-white">Profil</span>

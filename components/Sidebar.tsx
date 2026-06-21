@@ -13,6 +13,7 @@ import {
   Sticker,
   Gift,
   Gavel,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -38,15 +39,42 @@ const menuItems: MenuItem[] = [
   { name: "Lelang", icon: Gavel },
 ];
 
-export default function Sidebar() {
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
-    <aside className="w-[240px] h-screen bg-[#1a1d27] border-r border-[#2d3148] flex flex-col fixed left-0 top-0 z-30">
-      {/* Logo Header */}
-      <div className="h-16 flex items-center px-6 border-b border-[#2d3148]">
-        <span className="text-xl font-bold text-white tracking-wide">
-          Takø<span className="text-blue-500">.</span>
-        </span>
-      </div>
+    <>
+      {/* Mobile Backdrop overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+
+      <aside
+        className={cn(
+          "w-[240px] h-screen bg-[#1a1d27] border-r border-[#2d3148] flex flex-col fixed left-0 top-0 z-50 transition-transform duration-300 lg:translate-x-0",
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        )}
+      >
+        {/* Logo Header */}
+        <div className="h-16 flex items-center justify-between px-6 border-b border-[#2d3148]">
+          <span className="text-xl font-bold text-white tracking-wide">
+            Takø<span className="text-blue-500">.</span>
+          </span>
+          {/* Close button on mobile */}
+          <button
+            onClick={onClose}
+            className="lg:hidden p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-[#252836] border border-transparent transition-colors"
+            aria-label="Close menu"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
       {/* Menu Items */}
       <nav className="flex-1 overflow-y-auto px-4 py-6 space-y-1.5 custom-scrollbar">
@@ -93,5 +121,6 @@ export default function Sidebar() {
         </div>
       </div>
     </aside>
+    </>
   );
 }
